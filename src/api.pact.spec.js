@@ -6,7 +6,7 @@ import { API } from './api';
 jest.setTimeout(15000);
 
 const mockProvider = new Pact({
-  consumer: 'pact-demo-consumer',
+  consumer: 'pact-demo-consumer-2',
   provider: 'pact-demo-provider',
   log: path.resolve(process.cwd(), 'logs', 'pact.log'),
   logLevel: 'warn',

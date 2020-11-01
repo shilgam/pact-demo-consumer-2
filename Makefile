@@ -1,4 +1,4 @@
-PACTICIPANT := "pact-demo-consumer"
+PACTICIPANT := "pact-demo-consumer-2"
 PACT_CLI="docker run --rm -v ${PWD}:${PWD} -e PACT_BROKER_BASE_URL -e PACT_BROKER_TOKEN pactfoundation/pact-cli:0.16.3.0"
 # NOTE: Env vars PACT_BROKER_BASE_URL and PACT_BROKER_TOKEN should be specified
 # See details: https://github.com/pact-foundation/pact-ruby-cli#usage
