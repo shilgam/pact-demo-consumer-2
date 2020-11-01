@@ -1,0 +1,11 @@
+# ci configuration
+
+version: '3.4'
+services:
+  consumer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    command: npm start

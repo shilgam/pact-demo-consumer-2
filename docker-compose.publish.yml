@@ -1,0 +1,16 @@
+# publish contracts from consumer
+
+version: '3.4'
+services:
+  consumer:
+    network_mode: host
+    environment:
+      - PACT_BROKER_URL
+      - PACT_BROKER_TOKEN
+      - GIT_DISCOVERY_ACROSS_FILESYSTEM=1 # find .git dir in the parent dirs
+      - TRAVIS_BRANCH
+      - PROVIDER_BASE_URL
+      - LOCAL_PACT_BROKER # to switch from remote to local pact broker instance
+      - LOCAL_PACT_BROKER_URL
+      - LOCAL_PACT_BROKER_USERNAME
+      - LOCAL_PACT_BROKER_PASSWORD

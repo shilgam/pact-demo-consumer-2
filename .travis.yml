@@ -1,0 +1,22 @@
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: "Test Consumer"
+      name: "Unit test"
+      script: |
+        make test_unit_ci
+
+    - name: "Contract test & publish"
+      script: |
+        make publish_pact_ci
+
+    - stage: "Deploy"
+      name: "Deploy to prod"
+      env:
+        - PACT_BROKER_BASE_URL=https://telegacom.pact.dius.com.au
+      script: |
+        printenv
+        make deploy_to_prod
+      if: branch =~ /^(master|fake_deploy).*/
