@@ -18,7 +18,7 @@ describe('API', () => {
       },
     ];
     nock(API.url)
-      .get('/products')
+      .get('/items')
       .reply(200,
         products,
         { 'Access-Control-Allow-Origin': '*' });

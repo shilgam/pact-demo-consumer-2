@@ -29,7 +29,7 @@ describe('API Pact test', () => {
         uponReceiving: 'a request to get all products',
         withRequest: {
           method: 'GET',
-          path: '/products',
+          path: '/items',
         },
         willRespondWith: {
           status: 200,
@@ -62,7 +62,7 @@ describe('API Pact test', () => {
         uponReceiving: 'a request to get all products',
         withRequest: {
           method: 'GET',
-          path: '/products',
+          path: '/items',
         },
         willRespondWith: {
           status: 200,
