@@ -40,7 +40,7 @@ describe('API Pact test', () => {
             id: like(9),
             type: like('CREDIT_CARD'),
             name: like('Gem Visa'),
-          }, { min: 2 }),
+          }, { min: 1 }),
         },
       });
 
@@ -50,7 +50,6 @@ describe('API Pact test', () => {
       const product = await api.getAllProducts();
 
       expect(product).toStrictEqual([
-        { id: 9, name: 'Gem Visa', type: 'CREDIT_CARD' },
         { id: 9, name: 'Gem Visa', type: 'CREDIT_CARD' },
       ]);
     });
